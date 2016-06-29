@@ -114,7 +114,6 @@ int main(int argc, char const *argv[])
 				break;
 		}
 		i++;
-		//n--;
 		if(i > 3) i = 0;
 	}
 	while(opcion!=0);
