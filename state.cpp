@@ -2,14 +2,12 @@
 
 using namespace std;
 
-class state
-{
+class state{
 public:
 	virtual void ejecuta_accion() = 0;
 };
 
-class red_light : public state
-{
+class red_light : public state{
 private:
 	static red_light *unico1;
 public:
@@ -25,8 +23,7 @@ public:
 	}
 };
 
-class green_light : public state
-{
+class green_light : public state{
 private:
 	static green_light *unico2;
 public:
@@ -41,8 +38,7 @@ public:
 	}
 };
 
-class yellow_light : public state
-{
+class yellow_light : public state{
 private:
 	static yellow_light *unico3;
 public:
@@ -81,8 +77,8 @@ yellow_light *yellow_light::unico3 = NULL;
 traffic_light *traffic_light::unico4 = NULL;
 
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]){
+	
 	traffic_light *traffic = traffic_light::get_instance();
 	red_light *red = red_light::get_instance();
 	green_light *green = green_light::get_instance();
